@@ -1,0 +1,25 @@
+// setter injection
+
+public class BusinessServiceImpl {
+ private DataService dataService;
+ @Autowired
+ public void setDataService(DataService dataService) {
+  this.dataService = dataService;
+ }
+}
+
+public class BusinessServiceImpl {
+ @Autowired
+ private DataService dataService;
+}
+
+// constructor injection
+
+public class BusinessServiceImpl {
+ private DataService dataService;
+ @Autowired
+ public BusinessServiceImpl(DataService dataService) {
+  super();
+  this.dataService = dataService;
+ }
+}
